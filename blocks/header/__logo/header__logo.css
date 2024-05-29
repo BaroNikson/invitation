@@ -1,8 +1,22 @@
+body {
+    background-color: #ffffff; /* Белый цвет */
+    color: #000000; /* Черный цвет текста */
+    font-family: Arial, sans-serif; /* Пример шрифта */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #f8f9fa; /* Светлый фон для хедера */
+    padding: 20px;
+    text-align: center;
+}
+
 .header__logo {
     width: 80px;
     height: 80px;
     margin: 30px 0 -30px 5%;
-    background: url(../../../images/iconmonstr-triangle-lined.svg);
+    background: url(./images/img_7.png); /* Путь к новому изображению */
     background-repeat: no-repeat;
     background-position: center;
     box-shadow:
@@ -14,5 +28,65 @@
 @media screen and (max-width:460px) {
     .header__logo {
         margin: 30px 0 -15px 5%;
+    }
+}
+
+.content {
+    padding: 20px;
+}
+
+.section__title {
+    color: #333333; /* Темный цвет для заголовков секций */
+}
+
+.invitation__title, .photo-grid__title, .plan__title, .location__title {
+    color: #444444; /* Темный цвет для заголовков */
+}
+
+.main-paragraph {
+    color: #555555; /* Темный цвет для основного текста */
+}
+
+.photo-grid__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photo-grid__item {
+    width: calc(33.333% - 10px); /* Ширина фото в сетке */
+    height: auto;
+}
+
+.cards__item {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards__image {
+    width: 100%;
+    height: auto;
+}
+
+.cards__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white; /* Цвет фона overlay */
+    color: black; /* Цвет текста overlay */
+    transform: translateY(100%);
+    transition: .4s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+@media screen and (max-width:800px) {
+    .cards__overlay {
+        transform: translateY(0%);
     }
 }
