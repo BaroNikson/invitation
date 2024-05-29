@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     z-index: 1;
-    background-color: white;
+    background-color: black;
     transform: translateY(100%);
     transition: .4s linear;
     display: flex;
